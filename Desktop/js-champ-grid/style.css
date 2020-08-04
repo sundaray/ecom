@@ -556,53 +556,6 @@ div.results-list-container p span {
 } 
 /* end of results conatiner */
 
-@media (max-width: 420px) {
-
-    .forms-wrapper {
-        grid-column: 2 / -1;
-    }
-
-    #question-delete-btn {
-        grid-column: 12 / 13;
-    }
-    .admin-panel-wrapper h2 {
-        font-size: 2.5rem;
-    }
-    div.results-list-container h2 {
-        font-size: 2.5rem;
-    }
-}
-
-
-@media (max-width: 576px) {
-
-    .forms-wrapper {
-        grid-column: 2 / 12;
-    }
-
-    #question-delete-btn {
-        grid-column: 11 / 12;
-    }
-}
-
-
-
-@media (max-width: 768px) {
-
-    .admin-panel-container-one {
-        padding: 3rem;
-    }
-    
-    #question-update-btn {
-        padding: .3rem .5rem;
-    } 
-    #question-delete-btn {
-        padding: .3rem .5rem;
-    }    
-   
-}
-
-
 @media (max-width: 992px) {
 
 .admin-panel-container-one {
@@ -625,6 +578,60 @@ div.results-list-container p span {
 }
 
 }
+
+@media (max-width: 768px) {
+
+    .admin-panel-container-one {
+        padding: 3rem;
+    }
+    
+    #question-update-btn {
+        padding: .3rem .5rem;
+    } 
+    #question-delete-btn {
+        padding: .3rem .5rem;
+    }    
+}
+
+
+
+@media (max-width: 576px) {
+
+    .admin-panel-container-one {
+        padding: 2rem;
+    }
+
+
+    .forms-wrapper {
+        grid-column: 2 / 12;
+    }
+
+    #question-delete-btn {
+        grid-column: 11 / 12;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .admin-panel-container-one {
+        padding: 1rem;
+    }
+
+    .forms-wrapper {
+        grid-column: 2 / -1;
+    }
+
+    #question-delete-btn {
+        grid-column: 12 / 13;
+    }
+    .admin-panel-wrapper h2 {
+        font-size: 2.5rem;
+    }
+    div.results-list-container h2 {
+        font-size: 2.5rem;
+    }
+}
+
 
 /**************************************
 ***********END ADMIN SECTION*********
@@ -754,7 +761,7 @@ div.quiz-options-wrapper div:hover > p {
 }
 
 
-div.quiz-options-wrapper div span {
+.quiz-options-wrapper div span {
     display: block;
     padding: .5rem 1rem;
     margin-left: 1rem;
@@ -791,9 +798,35 @@ div.quiz-options-wrapper div:hover > span {
     background-color: dimgray;
 }
 
+
+
+@media (max-width: 576px) {
+    h2#asked-question-text {
+        font-size: 2.5rem;
+}
+.quiz-options-wrapper div span {
+    font-size: 2rem;
+}
+.quiz-options-wrapper div p {
+    font-size: 1.6rem;
+}
+#progress {
+    font-size: 2.5rem;
+}}
+
+
 @media (max-width: 420px) {
     h2#asked-question-text {
         font-size: 2.5rem;
+}
+.quiz-options-wrapper div span {
+    font-size: 1.8rem;
+}
+.quiz-options-wrapper div p {
+    font-size: 1.5rem;
+}
+#progress {
+    font-size: 2rem;
 }}
 
 
