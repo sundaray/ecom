@@ -1,0 +1,921 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gainsboro;
+    font-family: 'Courier New', Courier, monospace
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+/**************************************
+*********START LANDING SECTION*********
+**************************************/
+
+.landing-page-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.landing-page-header {
+    width: 100%;
+    height: 75vh;
+    grid-row: 1 / 2;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.landing-page-header h1 {
+    width: 100%;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.landing-page-header h2 {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+
+.landing-page-header p {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: royalblue;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.read-me {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50rem;
+    height: 30rem;
+    visibility: hidden;
+    opacity: 0;
+    background-color: dimgray;
+    padding: 2rem;
+    overflow: auto;  
+}
+
+.read-me i {
+    position: absolute;
+    top: 0%;
+    right:0;
+    font-size: 2rem;
+    float: right;
+    cursor: pointer;
+}
+
+.read-me p {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.read-me span {
+    color: black
+}
+
+
+.landing-inputs-wrapper {
+    height: 25vh;
+    width: 100%;
+    grid-row: 2 / 3;
+    background-color: black;
+    animation: fade 1.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.landing-inputs-wrapper input {
+    width: 40rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    padding: 1rem 1rem;
+    background: transparent;
+    color: silver;
+    border: none;
+    outline: none;
+    border-bottom: .2rem solid dimgray;
+    transition: all .3s;
+} 
+
+div.landing-inputs-wrapper input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: silver;
+}
+div.landing-inputs-wrapper input::-moz-placeholder { /* Firefox 19+ */
+  color: silver;
+}
+
+div.landing-inputs-wrapper input:focus {
+    border-bottom: .2rem solid white;
+    border-bottom: .2rem solid white;
+}
+
+.landing-inputs-wrapper button {
+    width: 40rem;
+    padding: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: .05rem;
+    border: none;
+    border-radius: 4rem;
+    outline: none;
+    color: #0D0D0D;
+    background-color: dimgray;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.landing-inputs-wrapper button:hover {
+    background-color: white;
+}
+
+
+@keyframes fade {
+    0% {
+        opacity: 0; 
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 420px) {
+
+.landing-inputs-wrapper input {
+        width: 30rem;
+}
+
+.landing-inputs-wrapper button {
+    width: 30rem;
+}
+
+.landing-page-header h1 {
+    font-size: 3rem;
+}
+
+.landing-page-header p {
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+}
+
+.read-me {
+    width: 30rem;
+    height: 20rem;
+}
+}
+
+@media (min-width: 420px) {
+
+.landing-inputs-wrapper input {
+        width: 35rem;
+}
+
+.landing-inputs-wrapper button {
+    width: 35rem;
+}
+
+.read-me {
+    width: 35rem;
+    height: 15rem;
+}
+}
+
+@media (min-width: 576px) {
+    .read-me {
+        width: 50rem;
+        height: 30rem;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .landing-inputs-wrapper input {
+        width: 40rem;
+}
+
+.landing-inputs-wrapper button {
+    width: 40rem;
+}
+
+.read-me {
+    width: 50rem;
+    height: 30rem;
+}
+}
+
+/**************************************
+***********END LANDING SECTION*********
+**************************************/
+
+
+
+/**************************************
+*********START ADMIN SECTION***********
+**************************************/
+
+.admin-panel-container-one {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 60vh 10vh 20vh;
+    padding: 5rem;
+}
+
+.admin-panel-wrapper {
+    grid-column: 1 / 8;
+    grid-row: 1 / 2;
+    border: .1rem solid dimgray;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, auto) 1fr repeat(2, auto); 
+    grid-row-gap: 1rem;
+    padding: 2rem;
+    overflow: auto;
+}
+
+div.admin-panel-wrapper::-webkit-scrollbar {
+    background-color: dimgray;
+    width: 1rem;
+}
+
+div.admin-panel-wrapper::-webkit-scrollbar-thumb {
+      background-color: #0D0D0D; 
+}
+
+.admin-panel-wrapper a {
+    grid-column: 12 / 13;
+    grid-row: 1 / 2;
+}  
+
+#admin-logout-btn {
+    padding: .3rem 1rem;
+    border: none;
+    border-bottom: .2rem solid dimgray;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    transition: border-bottom .3s;
+    background-color: silver;
+}
+
+#admin-logout-btn:hover {
+    border-bottom: none;
+}
+
+.admin-panel-wrapper h2 {
+    font-size: 3rem;
+    grid-column: 2 / -1;
+    grid-row: 2 / 3;
+}
+
+#question-update-btn {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    padding: .3rem 0;
+    border: none;
+    border-bottom: .2rem solid dimgray;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    transition: border-bottom .3s;
+    background-color: silver;
+}
+
+#question-update-btn:hover {
+    border-bottom: none;
+}
+
+#question-delete-btn {
+    grid-column: 8 / 9;
+    grid-row: 3 / 4;
+    padding: .3rem 0;
+    border: none;
+    border-bottom: .2rem solid dimgray;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    transition: border-bottom .3s;
+    background-color: silver;
+}
+
+#question-delete-btn:hover {
+    border-bottom: none;
+}
+
+.forms-wrapper {
+    grid-column: 2 / 9;
+    grid-row: 4 / 5;
+    overflow: auto;
+}
+
+textarea {
+    width: 100%;
+    padding: 1rem;
+}
+
+textarea {
+    font-size: 1.4rem;
+    letter-spacing: .025rem;
+    color: dimgray;
+    border: .1rem solid silver;
+    padding: 1rem;
+    outline: none;
+    background: white;
+    transition: all .5s;
+}
+
+textarea:focus {
+    border: .1rem solid royalblue;
+}
+
+.admin-option-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.admin-option-wrapper input[type="radio"] { 
+    background-color: white;
+    border: .1rem solid silver;
+    margin-right: 1rem;
+}
+
+.admin-option-wrapper input[type="text"] {
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.4rem;
+    background-color: white;
+    color: dimgray;
+    padding: .5rem;
+    border: .1rem solid silver;
+    outline: none;
+    animation: fade .5s;
+    transition: all .5s;
+}
+
+div.forms-wrapper input[type="text"]:focus {
+    border: .1rem solid  royalblue;
+}
+
+#question-insert-btn {
+    grid-column: 2 / 3;
+    grid-row: 6 / 7;
+    padding: .3rem 0;
+    border: none;
+    border-bottom: .2rem solid dimgray;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    transition: border-bottom .3s;
+    background-color: silver;
+}
+
+#question-insert-btn:hover {
+    border-bottom: none;
+}
+
+#questions-clear-btn {
+    grid-column: 11 / 13;
+    grid-row: 6 / 7;
+    border: none;
+    border-bottom: .2rem solid dimgray;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    transition: border-bottom .3s;
+    background-color: silver;
+}
+
+#questions-clear-btn:hover {
+    border-bottom: none;
+}
+
+/* Question insert wrapper */
+
+.inserted-questions-wrapper {
+    grid-column: 1 / 8;
+    grid-row: 3 / 4;
+    padding: 1rem 0;
+    overflow: auto;
+    border: .1rem solid dimgray;
+}
+
+.inserted-questions-wrapper p {
+    width: 90%;
+    color: white;
+    background: dimgray;
+    padding: 1rem;
+    margin: 1rem auto;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inserted-questions-wrapper p span {
+    font-size: 1.5rem;
+}
+
+.inserted-questions-wrapper p button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2  rem;
+    background-color: black;
+    color: white;
+    padding: .2rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: .5rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+ .inserted-questions-wrapper p button:hover {
+    background-color: #555;
+} 
+
+div.inserted-questions-wrapper::-webkit-scrollbar {
+    background-color: dimgray;
+    width: 1rem;
+}
+
+div.inserted-questions-wrapper::-webkit-scrollbar-thumb {
+      background-color: black;
+} 
+
+/* end of question insert wrapper */
+
+/* results container */
+.results-list-container {
+    grid-column: 9 / 13;
+    grid-row: 1 / 4;
+    overflow: auto;
+    border: .1rem solid dimgray;
+    padding: 2rem;
+}
+
+div.results-list-container::-webkit-scrollbar {
+    background-color: dimgray;
+    width: 1rem;
+}
+
+div.results-list-container::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+div.results-list-container h2 {
+    font-size: 3rem;
+    color: black;
+    text-align: left;
+    margin-top: 3rem;
+}
+
+#results-clear-btn {
+    float: right;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    border: none;
+    border-bottom: .2rem solid dimgray;
+    border-radius: .5rem;
+    width: 10rem;
+    padding: .3rem 0rem;
+    margin: 1rem 0rem;
+    background: silver;
+    outline: none;
+    transition: all .3s;
+    cursor: pointer;
+} 
+
+#results-clear-btn:hover {
+    border-bottom: none;
+}
+
+div.results-list-container p {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem auto;
+    text-align: center;
+    text-transform:capitalize;
+    overflow: hidden;
+    background-color: dimgray;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.results-list-container p span {
+    font-size: 1.5rem;
+}
+
+.delete-result-btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: .025rem;
+    display: block;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    color: white;
+    background: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s;
+} 
+
+.delete-result-btn:hover {
+    background: #555;
+} 
+/* end of results conatiner */
+
+@media (max-width: 420px) {
+
+    .forms-wrapper {
+        grid-column: 2 / -1;
+    }
+
+    #question-delete-btn {
+        grid-column: 12 / 13;
+    }
+    .admin-panel-wrapper h2 {
+        font-size: 2.5rem;
+    }
+    div.results-list-container h2 {
+        font-size: 2.5rem;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .forms-wrapper {
+        grid-column: 2 / 12;
+    }
+
+    #question-delete-btn {
+        grid-column: 11 / 12;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .admin-panel-container-one {
+        padding: 3rem;
+    }
+    
+    #question-update-btn {
+        padding: .3rem .5rem;
+    } 
+    #question-delete-btn {
+        padding: .3rem .5rem;
+    }    
+   
+}
+
+
+@media (max-width: 992px) {
+
+.admin-panel-container-one {
+    grid-template-rows: 60vh 5vh 20vh 5vh 30vh;
+    padding: 4rem;
+}
+
+
+.admin-panel-wrapper {
+    grid-column: 1 / -1;
+}
+
+.inserted-questions-wrapper {
+    grid-column: 1 / -1;
+}
+
+.results-list-container {
+    grid-column: 1 / -1;
+    grid-row: 5 / 6;
+}
+
+}
+
+/**************************************
+***********END ADMIN SECTION*********
+**************************************/
+
+/**************************************
+***********START QUIZ SECTION**********
+**************************************/
+section.quiz-container {
+    height: 100vh;
+    width: 100%;
+    background: gainsboro;
+    overflow: hidden;
+    animation: fade .8s;
+    position: relative;
+}
+
+.quiz-wrapper {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70vh;
+    border: .1rem solid dimgray;
+    overflow: auto;
+}
+
+.quiz-wrapper::-webkit-scrollbar {
+    background-color: dimgray;
+    width: 1rem;
+}
+
+.quiz-wrapper::-webkit-scrollbar-thumb {
+      background-color: black;  
+}
+
+
+h2#asked-question-text {
+    color: black;
+    font-size: 3rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.instant-answer-container {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    opacity: 0;
+}
+
+#instant-answer-wrapper {
+    padding: 1rem;
+    overflow: auto;
+}
+
+div.red {
+    background-color: red;
+}
+
+div.green {
+    background-color: green;
+}
+
+
+#instant-answer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#instant-answer-wrapper p {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    float: left;
+    width: 80%;
+}
+
+div#instant-answer-wrapper button {
+    width: 6rem;
+    padding: .4rem .6rem;
+    background-color: black;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: .5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+div#instant-answer-wrapper button:hover {
+    background: white;
+    color: black;
+}
+
+.quiz-options-wrapper {
+    width: 80%;
+    margin: 3rem auto 0 auto;
+    overflow: auto;
+}
+
+.quiz-options-wrapper div {
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    position: relative;
+    transition: all .5s;
+    background-color: dimgray;
+    overflow: hidden;
+    animation: fade 1s;
+    display: flex;
+    align-items: center;
+}
+
+
+div.quiz-options-wrapper div:hover {
+    cursor: pointer;
+}
+
+div.quiz-options-wrapper div:hover > p {
+    color: white;
+}
+
+
+div.quiz-options-wrapper div span {
+    display: block;
+    padding: .5rem 1rem;
+    margin-left: 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-weight: bold;
+    transition: all .2s;
+    background: silver;
+}
+
+div.quiz-options-wrapper div:hover > span {
+    background-color: white;
+}
+
+.quiz-options-wrapper div p {
+    margin-left: 1rem;
+    font-size: 2rem;
+    letter-spacing: 0.025rem;
+    color: white;
+    transition: all .2s;
+}
+
+/*PROGRES BAR*/
+
+#progress {
+    float: right;
+    padding: .5rem 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    background-color: dimgray;
+}
+
+@media (max-width: 420px) {
+    h2#asked-question-text {
+        font-size: 2.5rem;
+}}
+
+
+/**************************************
+*********END QUIZ SECTION***********
+**************************************/
+
+/**************************************
+******START FINAL RESULT SECTION*******
+**************************************/
+
+section.final-result-container {
+    height: 100vh;
+    width: 100%;
+    background-color: gainsboro;
+    animation: fade .8s;
+}
+
+div.final-result {
+    width: 70%;
+    height: 70vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: .1rem solid dimgray;
+    overflow: auto;
+}
+
+h2#final-score-text {
+    width: 80%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: black;
+}
+
+#final-logout-btn {
+    font-size: 1.6rem;
+    margin: 1rem;
+    float: right;
+    padding: .3rem 1rem;  
+    border-radius: .5rem;
+    width: 10rem;
+    color: black;
+    background: silver;
+    border: none;
+    border-bottom: .2rem solid dimgray;
+    outline: none;
+    transition: all .3s;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+#final-logout-btn:hover {
+    border-bottom: none;
+}
+
+
+@media (max-width: 576px) {
+    h2#final-score-text {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 420px) {
+    h2#final-score-text {
+        font-size: 2rem;
+    }
+}
+
+/**************************************
+******END FINAL RESULT SECTION*********
+**************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
