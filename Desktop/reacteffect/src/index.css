@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 6rem;
+  background-color: black;
+}
+
+nav {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav a {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+nav li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+nav a:link,
+a:visited {
+  color: gainsboro;
+}
+
+nav a:hover {
+  color: white;
+}
+
+main {
+  margin: 2rem;
+}
