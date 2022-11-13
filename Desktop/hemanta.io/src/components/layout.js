@@ -9,7 +9,7 @@ export default function Layout() {
       <header className="shadow w-full bg-gray-50 px-4 md:px-6 flex items-center fixed top-2 left-0">
         <Link to="/" className="mr-auto">
           <h2 className="name text-gray-900 text-xl font-bold">
-            Hemanta<span className="fi fi-in fis ml-1"></span>
+            Hemanta<span className="fi fi-in fis ml-2"></span>
           </h2>
         </Link>
         <nav>
